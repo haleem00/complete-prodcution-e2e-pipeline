@@ -90,5 +90,12 @@ pipeline {
                 }
             }
 
+        stage('Trigger CD Pipeline') {
+            steps {
+                build job: 'cd-new'
+            }
+        }
+
+
     }
 }
